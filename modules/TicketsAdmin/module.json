@@ -1,0 +1,15 @@
+{
+    "name": "TicketsAdmin",
+    "alias": "ticketsadmin",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\TicketsAdmin\\Providers\\TicketsAdminServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        "start.php"
+    ]
+}

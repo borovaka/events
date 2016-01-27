@@ -1,0 +1,15 @@
+{
+    "name": "TicketsFront",
+    "alias": "ticketsfront",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\TicketsFront\\Providers\\TicketsFrontServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        "start.php"
+    ]
+}
