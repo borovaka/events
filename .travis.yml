@@ -14,9 +14,11 @@ before_script:
   - mysql -e 'create database homestead_test;'
   - composer self-update
   - composer install --prefer-source --no-interaction
+  - chmod -R 777 storage/
   - php artisan migrate --force
   - php artisan db:seed --class DataSeeder --force
-  - php artisan serve >/dev/null 2>&1 &
+  - php -S localhost:8000 -t public &
+  - sleep 5
 
 # Commands you want to run that will verify your build.
 script: vendor/bin/phpunit
