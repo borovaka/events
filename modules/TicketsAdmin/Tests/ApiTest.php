@@ -47,7 +47,7 @@ JSON;
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "http://tickets.dev/admin/api/events/create",
+            CURLOPT_URL => url('/admin/api/events/create'),
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
