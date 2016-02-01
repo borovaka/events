@@ -16,6 +16,7 @@ before_script:
   - composer install --prefer-source --no-interaction
   - php artisan migrate --force
   - php artisan db:seed --class DataSeeder --force
+  - php artisan serve >/dev/null 2>&1 &
 
 # Commands you want to run that will verify your build.
 script: vendor/bin/phpunit
