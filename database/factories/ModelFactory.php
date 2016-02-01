@@ -23,14 +23,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Event::class, function (Faker\Generator $faker) {
     return [
-        'user_id' => factory(App\User::class)->create()->id,
         'event_name' => $faker->name,
         'event_desc' => $faker->sentence(),
         'start_date' => $faker->dateTime,
         'quantity' => $faker->numberBetween(1,1000),
         'price' => $faker->randomFloat(2,1,100),
         'discount' => $faker->randomFloat(2,1,10),
-        'promocode' => $faker->name,
+        'promocode' => $faker->word,
 
     ];
 });

@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Sofa\Eloquence\Eloquence;
 
 /**
  * App\Event
@@ -25,14 +26,24 @@ class Event extends Model
 {
 
     use SoftDeletes;
+    use Eloquence;
 
     protected $dates = ['start_date'];
 
-    protected $hidden = ['user_id'];
+    protected $hidden = ['user_id','created_at','updated_at','deleted_at'];
+
+    protected $fillable = ['event_name', 'event_desc', 'start_date', 'quantity', 'price', 'discount','discount','promocode'];
+
+    protected $searchableColumns = ['event_name', 'event_desc','user.name'];
 
     public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class)->withTrashed();
     }
+
+    public function ticket() {
+        return $this->hasMany(Ticket::class);
+    }
+
 
 }

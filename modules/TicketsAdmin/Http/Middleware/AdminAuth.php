@@ -13,7 +13,7 @@ class AdminAuth {
      */
     public function handle($request, Closure $next)
     {
-        if(is_null($request->user()) || !$request->user()->isAdmin()) {
+        if(!$request->user()->isAdmin()) {
             return redirect('/');
         }
         return $next($request);

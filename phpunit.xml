@@ -11,6 +11,8 @@
     <testsuites>
         <testsuite name="Application Test Suite">
             <directory>./tests/</directory>
+            <directory>./modules/TicketsAdmin/Tests</directory>
+            <directory>./modules/TicketsFront/Tests</directory>
         </testsuite>
     </testsuites>
     <filter>

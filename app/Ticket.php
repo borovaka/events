@@ -22,16 +22,18 @@ class Ticket extends Model
 {
     use SoftDeletes;
 
+    protected $fillable = ['event_id','quantity','price','raw_price'];
+
     protected $hidden = ['user_id', 'event_id'];
 
     public function event()
     {
-        return $this->hasOne(Event::class);
+        return $this->belongsTo(Event::class);
     }
     
     public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class);
     }
 
 

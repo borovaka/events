@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/tickets":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/tickets","hostpath":"D:/Dev/Code/tickets","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/Dev/Code/tickets","disabled":false,"__vagrantfile":true}}}

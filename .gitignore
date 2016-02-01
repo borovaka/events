@@ -1,7 +1,5 @@
 /.idea
-/.vagrant
 /vendor
 /node_modules
-Homestead.json
 .env
 _ide_*.php
