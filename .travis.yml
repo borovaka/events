@@ -6,7 +6,6 @@ php:
   - 5.5
   - 5.6
   - 7.0
-  - hhvm
 
 # Commands to be run before your environment runs.
 before_script:
@@ -27,7 +26,7 @@ script: vendor/bin/phpunit
 # fast_finish: If your build fails do not continue trying to build, just stop.
 matrix:
   allow_failures:
-    - php: hhvm
+    - php: 5.6
   fast_finish: true
 
 # Customize when the notification emails are sent.
